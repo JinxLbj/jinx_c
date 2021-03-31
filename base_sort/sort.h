@@ -8,5 +8,6 @@ void select_sort(int* arr, int length);
 void bubbling_sort(int* arr, int length);
 void insert_sort(int* arr, int length);
 void merge_sort(int* arr, int start, int end);
+void quick_sort(int* arr, int start, int end);
 #endif //JINX_SORT_H
 

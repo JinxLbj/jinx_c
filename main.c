@@ -21,8 +21,18 @@ void revert_pair_question() {
     revert_pair(arr, 0, length - 1);
 }
 
+void quick() {
+    int arr[10] = {2, 1, 0, 4, 4, 7, 6, 11, 8, 9};
+    int length = sizeof(arr) / sizeof(arr[0]);
+    quick_sort(arr, 0, length - 1);
+    for (int i = 0; i < length; i++) {
+        printf("%d\n", arr[i]);
+    }
+}
+
 int main() {
 //    small_sum_question();
-    revert_pair_question();
+//    revert_pair_question();
+    quick();
     return 0;
 }

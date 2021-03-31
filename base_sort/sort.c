@@ -68,3 +68,22 @@ void merge_sort(int* arr, int start, int end) {
         arr[n] = temp[z];
     }
 }
+
+void quick_sort(int* arr, int start, int end) {
+    if (start >= end) {
+        return;
+    }
+    int target = arr[end];
+    int i = start, j = end, cur = start;
+    while (cur <= j) {
+        if (arr[cur] < target) {
+            swap(arr, cur++, i++);
+        } else if (arr[cur] > target) {
+            swap(arr, cur, j--);
+        } else {
+            cur++;
+        }
+    }
+    quick_sort(arr, start, i - 1);
+    quick_sort(arr, j + 1, end);
+}
